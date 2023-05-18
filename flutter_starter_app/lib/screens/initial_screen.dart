@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -10,8 +12,10 @@ class InitialScreen extends StatefulWidget {
 class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("Initial Screen"),
+    return SafeArea(
+      child: const Scaffold(
+        body: Text("Initial Screen"),
+      ),
     );
   }
 }

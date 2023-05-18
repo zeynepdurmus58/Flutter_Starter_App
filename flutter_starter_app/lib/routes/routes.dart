@@ -1,4 +1,5 @@
 // ignore_for_file: unused_element
+import 'package:flutter_starter_app/screens/static_screen/settings_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/user/change_password_screen.dart';
@@ -54,6 +55,10 @@ final routes = GoRouter(
     GoRoute(
       path: '/contact',
       builder: (context, state) => const ContactScreen(),
+    ),
+    GoRoute(
+      path: '/settings',
+      builder: (context, state) => const SettingsScreen(),
     ),
 
   ],

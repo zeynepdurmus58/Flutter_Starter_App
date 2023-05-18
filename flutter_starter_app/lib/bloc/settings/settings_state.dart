@@ -5,8 +5,9 @@ class SettingsState {
   List<String> userInfo;
 
   SettingsState(
-    {required this.language, 
-    required this.darkMode, 
-    required this.userLoggedIn, 
-    required this.userInfo});
+    { this.language = "en", 
+     this.darkMode = false, 
+     this.userLoggedIn = false, 
+    this.userInfo = const [],
+  });
 }
