@@ -1,7 +1,8 @@
 // ignore_for_file: unused_element
-import 'package:flutter_starter_app/screens/static_screen/settings_screen.dart';
 import 'package:go_router/go_router.dart';
 
+import '../screens/home_screen.dart';
+import '../screens/static_screen/settings_screen.dart';
 import '../screens/user/change_password_screen.dart';
 import '../screens/user/forget_password_screen.dart';
 import '../screens/user/login_screen.dart';
@@ -11,6 +12,7 @@ import '../screens/initial_screen.dart';
 import '../screens/static_screen/about_screen.dart';
 import '../screens/static_screen/contact_screen.dart';
 import '../screens/user/register_screen.dart';
+import '../screens/user/welcome_screen.dart';
 
 
 // GoRouter configuration
@@ -21,6 +23,14 @@ final routes = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) => const InitialScreen(),
+    ),
+    GoRoute(
+      path: '/welcome',
+      builder: (context, state) => const WelcomeScreen(),
+    ),
+    GoRoute(
+      path: '/home',
+      builder: (context, state) => const HomeScreen(),
     ),
     // User Screen
     GoRoute(

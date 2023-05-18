@@ -12,6 +12,10 @@ class UpdateProfileScreen extends StatefulWidget {
 class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text("Update Profile Screen"));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Update Profile'),
+      ),
+      body: Text("Update Profile Screen"));
   }
 }

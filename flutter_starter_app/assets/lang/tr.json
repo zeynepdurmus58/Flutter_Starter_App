@@ -4,5 +4,7 @@
     "darkMode":"Gece Modu",
     "language_selection":"Dil Seçimi",
     "language_selection2 ":"Tercih ettiğiniz dili seçiniz",
-    "cancel":"İptal"
+    "cancel":"İptal",
+    "login":"Giriş Yap",
+    "register":"Üye Ol"
 }

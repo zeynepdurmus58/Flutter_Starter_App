@@ -3,6 +3,22 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppStorage{
+  //hepsini oku
+  Future<Map<String, dynamic>> readAll() async {
+    final SharedPreferences storage = await SharedPreferences.getInstance();
+
+    var loggedIn = storage.getBool("isLoggedIn");
+    var userInfo = storage.getStringList("userInfo");
+    var language = storage.getString("language");
+    var darkMode = storage.getBool("darkMode");
+
+    return {
+      "loggedIn": loggedIn,
+      "userInfo": userInfo,
+      "language": language,
+      "darkMode": darkMode,
+    };
+  }
 
   //kullanıcı verilerini oku
   readUserData() async {
@@ -38,8 +54,8 @@ class AppStorage{
  
   //kullanıcı verilerini yaz
   writeUserData(
-    bool isLoggedIn,
-    List<String> userInfo,
+    {required bool isLoggedIn,
+    required List<String> userInfo,}
   ) async {
     final SharedPreferences storage = await SharedPreferences.getInstance();
     storage.setBool("isLoggedIn", isLoggedIn);
@@ -48,8 +64,8 @@ class AppStorage{
 
   //uygulama ayarlarını yaz
   writeAppSettings(
-    String language,
-    bool darkMode,
+    {required String language,
+    required bool darkMode,}
   ) async {
     final SharedPreferences storage = await SharedPreferences.getInstance();
     storage.setString("language", language);

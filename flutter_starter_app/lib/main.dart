@@ -3,10 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_starter_app/bloc/settings/setting_cubit.dart';
-import 'package:flutter_starter_app/bloc/settings/settings_state.dart';
-import 'package:flutter_starter_app/localizations/app_localizations.dart';
+import 'bloc/settings/setting_cubit.dart';
+import 'bloc/settings/settings_state.dart';
+import 'localizations/app_localizations.dart';
 import 'routes/routes.dart';
+import 'themes/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,12 +49,14 @@ class MyApp extends StatelessWidget {
 
             // şu an hangi dil
             locale: Locale(state.language, ""),
-
-            theme: ThemeData(
+            themeMode: state.darkMode ? ThemeMode.dark : ThemeMode.light,
+            theme: Themes.lightTheme,
+            darkTheme: Themes.darkTheme,
+            /* ThemeData(
               brightness: state.darkMode ? Brightness.dark : Brightness.light,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
-            ),
+              //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              //useMaterial3: true,
+            ), */
             routerConfig: routes,
           );
         },
