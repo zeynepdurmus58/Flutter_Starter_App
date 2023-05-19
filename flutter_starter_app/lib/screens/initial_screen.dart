@@ -4,11 +4,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter_app/bloc/settings/setting_cubit.dart';
 import 'package:flutter_starter_app/storage/storage.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:go_router/go_router.dart';
 
+import '../bloc/settings/settings_cubit.dart';
 import '../localizations/app_localizations.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -92,7 +92,6 @@ class _InitialScreenState extends State<InitialScreen> {
       } else {
         GoRouter.of(context).replace('/welcome');
       }
-      
     } catch (e) {}
   }
 
@@ -106,11 +105,9 @@ class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: loading
-            ? Center(child: const CircularProgressIndicator())
-            : const Text("Loaded"),
-      ),
-    );
+        child: Scaffold(
+            body: loading
+                ? Center(child: const CircularProgressIndicator())
+                : const Text("Loaded")));
   }
 }

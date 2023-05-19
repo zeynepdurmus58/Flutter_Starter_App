@@ -1,34 +1,68 @@
-/* // ignore_for_file: unused_local_variable
+// ignore_for_file: non_constant_identifier_names, avoid_print
 
 import 'package:dio/dio.dart';
 
 class SystemApi {
 
-  login (String username, String password) async {
+  Object error = "";
+  final AppLink = "https://api.eskanist.com/public/api";
+  login({required String email, required String password}) async {
     try {
       final dio = Dio();
-      return (
-        "name": "Zeynep Durmuş",
-        "email": "zeynepdurmus058@gmail.com",
-        "phone": "05580585858",
-        "token": "dnshlhglkdhslkghdslk",
-      );
-    }catch(e){
+      String endpoint = "login";
+      var params = {
+        "email": email,
+        "passsword": password,
+      };
+
+      var formData = FormData.fromMap(params);
+
+      final response = await dio.post("$AppLink$endpoint", data: formData);
+
+      if(response.statusCode == 200) {
+        var token = response.data["token"];
+        return token;
+      }
+      else {
+        return null;
+      }
+    } catch (e) {
+      error = e;
       return null;
     }
   }
 
-  register (String name, String password, String email, String phone) async {
+  Future<String?> register(
+    {required String email, 
+    required  String password, 
+    required  String name, 
+    required  String phone}) async {
     try {
       final dio = Dio();
-      return (
-        "name": "Zeynep Durmuş",
-        "email": "zeynepdurmus058@gmail.com",
-        "phone": "05580585858",
-        "token": "dnshlhglkdhslkghdslk",
-      );
-    }catch(e){
+      String endpoint = "/register";
+      
+      var params = {
+        "name": name,
+        "email": email,
+        "passsword": password,
+        "confirm_password": password,
+      };
+      print(params);
+
+      var formData = FormData.fromMap(params);
+
+      final response = await dio.post(endpoint, data: formData);
+      print(response);
+
+      if(response.statusCode == 200) {
+        var token = response.data["token"];
+        return token;
+      }
+      else {
+        return null;
+      }
+    } catch (e) {
       return null;
     }
   }
-} */
+}

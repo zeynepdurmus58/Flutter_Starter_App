@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/settings/setting_cubit.dart';
+import '../../bloc/settings/settings_cubit.dart';
 import '../../localizations/app_localizations.dart';
 
 class SettingsScreen extends StatefulWidget {

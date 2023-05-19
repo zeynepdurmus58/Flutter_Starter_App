@@ -20,7 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       ),
       body: Column(
         children: [
-          const Text("Ya giriş yapın ya da kayıt olun"),
+          //const Text("Ya giriş yapın ya da kayıt olun"),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -42,9 +42,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ],
             ),
           ),
-         /*  ElevatedButton(onPressed: () {
+          ElevatedButton(onPressed: () {
             GoRouter.of(context).replace('/home');
-          }, child: Text(AppLocalizations.of(context).getTranslate("continue_no_user"))) */
+          }, child: Text(AppLocalizations.of(context).getTranslate("continue_no_user")))
         ],
       ),
     );
