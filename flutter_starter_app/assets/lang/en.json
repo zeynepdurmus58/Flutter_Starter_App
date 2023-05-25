@@ -10,7 +10,7 @@
     "continue_no_user": "Continue without logging in",
     "mail": "Email",
     "name": "Full Name",
-    "phone": "phone",
+    "phone": "Phone",
     "passwd": "Passsword",
     "mail_required": "Please Enter Your Mail Address.",
     "name_required": "Please Enter Your Name.",
@@ -24,5 +24,8 @@
     "logout_confirm": "Are you sure you want to log out?",
     "warning": "Warning",
     "close": "Close",
-    "register_failed": "Register Failed"
+    "register_failed": "Register Failed",
+    "get_started": "Get Started",
+    "i_already_have_an_account": "I already have an account",
+    "welcome_to_my_app": "Welcome to my app"
 }

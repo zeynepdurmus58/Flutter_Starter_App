@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -128,6 +128,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         title: Text('Register'),
       ),
       body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             textAlign: TextAlign.right,

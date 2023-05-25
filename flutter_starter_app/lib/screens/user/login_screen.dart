@@ -121,6 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
         title: Text('Login'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // e-mail
           Text(
