@@ -120,6 +120,16 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: controller,
         child: Column(
           children: [
+            Text(
+              "News",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+                
+              ),
+            ),
             getNews(),
             loading ? Container(height: 50, margin: EdgeInsets.only(bottom: 10) ,child: const CircularProgressIndicator()) : const SizedBox(),
             /* FadeIn(
