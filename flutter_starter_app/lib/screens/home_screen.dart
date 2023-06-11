@@ -109,6 +109,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: InkWell(
+              child: Icon(Iconsax.support),
+              onTap: () => GoRouter.of(context).push('/support'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: InkWell(
               child: Icon(Iconsax.setting),
               onTap: () => GoRouter.of(context).push('/settings'),
             ),

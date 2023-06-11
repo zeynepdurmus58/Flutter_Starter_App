@@ -26,6 +26,8 @@ dependencies:
   animate_do: ^3.0.2
   f: ^0.1.7
   flutter_html: ^2.1.2
+  grouped_list: ^4.2.0
+  intl: ^0.18.0
 
 
 dev_dependencies:

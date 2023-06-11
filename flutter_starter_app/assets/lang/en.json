@@ -27,5 +27,6 @@
     "register_failed": "Register Failed",
     "get_started": "Get Started",
     "i_already_have_an_account": "I already have an account",
-    "welcome_to_my_app": "Welcome to my app"
+    "welcome_to_my_app": "Welcome to my app",
+    "tickets": "Tickets"
 }

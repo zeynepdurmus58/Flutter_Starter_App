@@ -1,4 +1,7 @@
 // ignore_for_file: unused_element
+import 'package:flutter_starter_app/screens/support/conversations_screen.dart';
+import 'package:flutter_starter_app/screens/support/support_request_screen.dart';
+import 'package:flutter_starter_app/screens/support/tickets_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/home_screen.dart';
@@ -19,6 +22,23 @@ import '../screens/user/welcome_screen.dart';
 final routes = GoRouter(
   initialLocation: '/',
   routes: [
+    //supports
+    GoRoute(
+      path: '/support',
+      builder: (context, state) => const SupportRequestScreen(),
+    ),
+    GoRoute(
+      path: '/tickets',
+      builder: (context, state) => const TicketsScreen(),
+    ),
+    GoRoute(
+      path: '/chat',
+      builder: (context, state) => const ConversationsScreen(),
+    ),
+    GoRoute(
+      path: '/tickets',
+      builder: (context, state) => const TicketsScreen(),
+    ),
     // Loader Screen
     GoRoute(
       path: '/',
