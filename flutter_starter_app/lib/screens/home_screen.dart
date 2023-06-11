@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(right: 20.0),
             child: InkWell(
               child: Icon(Iconsax.support),
-              onTap: () => GoRouter.of(context).push('/support'),
+              onTap: () => GoRouter.of(context).push('/chat'),
             ),
           ),
           Padding(
